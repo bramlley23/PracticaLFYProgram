@@ -13,10 +13,10 @@ def ventanaEmergente():
         lineas = f_obj.readlines()
 
     for line in lineas:
-        lista.append(line)
+
         print(line.rstrip())
     print("Sigo vivo")
-    print(lista())
+    
 
 Button(raiz, text="Abrir Archivo",command=ventanaEmergente).pack()
 raiz.mainloop()
