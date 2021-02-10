@@ -16,7 +16,7 @@ def ventanaEmergente():
 
         print(line.rstrip())
     print("Sigo vivo")
-    
+
 
 Button(raiz, text="Abrir Archivo",command=ventanaEmergente).pack()
 raiz.mainloop()
