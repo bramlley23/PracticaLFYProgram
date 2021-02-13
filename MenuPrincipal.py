@@ -23,8 +23,8 @@ def menuPrincipal():
 
 		if(opcion==1):
 			print("==================================")
-			print("uno")
 			ventanaEmergente()
+			print("==================================")
 
 		elif(opcion==2):
 			print("==================================")
