@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import filedialog
 
 lista=[]
+ordenar=[]
 raiz=Tk()
 def ventanaEmergente():
     archivo = filedialog.askopenfilename(title="Archivos", initialdir="C:/")
@@ -15,8 +16,20 @@ def ventanaEmergente():
     for line in lineas:
 
         print(line.rstrip())
-    print("Sigo vivo")
-    
+
+    ordenarLista(archivo)
+
 
 Button(raiz, text="Abrir Archivo",command=ventanaEmergente).pack()
 raiz.mainloop()
+
+def ordenarLista(self, archivo):
+    archivo = open(archivo,'r')
+    arc= archivo.readlines()
+    archivo.close()
+
+    #para mostrar ordenar linea[0]
+    for linea in arc:
+        if linea[0] in 'ORDEN':
+            ordenar.append(linea)
+    print(ordenar)

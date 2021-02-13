@@ -28,6 +28,7 @@ def menuPrincipal():
 		elif(opcion==2):
 			print("==================================")
 			print("dos")
+			ordenarLista()
 
 		elif(opcion==3):
 			print("==================================")
