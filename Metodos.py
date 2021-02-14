@@ -5,7 +5,7 @@ raiz=Tk()
 class ArchivoDEntrada:
     def __init__(self,nomArchivo):
         self.nomArchivo=nomArchivo
-
+#<----------------------------------------------------------------------------->
     def ordenarLista(self):
         print("<------------------------>")
 
@@ -19,31 +19,30 @@ class ArchivoDEntrada:
         contador = 1
         archivo.close()
 
+
         #PARA MOSTRAR ORDENAR LINEA[0], SEPONE ORDENAR
         #PARA MOSTRAR ORDENAR,BUSCAR LINEA[2],SE PONE BUSCAR
         for linea in arc:
           if linea[0] in 'ORDENAR':
-            print(True,"numLInea=",contador)
+            #print(True,"numLInea=",contador) #imprime el numero de filas
             buscar.append(linea)
-          contador += 1
+        contador += 1
 
         x=[i.replace('ORDENAR\n','')for i in buscar]
-
-
+        print(x)
         y='='.join(x)
-
 
         nueva = y.split('=')
 
         d=','.join(nueva)
         t=d.split(',')
-        print(t)
+        #print(t) # Imprime los datos del archivo
         #print(d.split(','))
         d=[]
         for h in t:
           if h.isnumeric():
             d.append(h)
-        print(d)
+        #print(d)
 
         with open("d.txt","w")as fp:
           for line in d:
@@ -52,6 +51,7 @@ class ArchivoDEntrada:
         with open("d.txt")as a:
           j=a.read().split('\n')
         tama = len(j)-1
+        
         print("<------------------------------>")
         arraya=[]
         for k in j:
