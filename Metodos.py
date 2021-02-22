@@ -51,7 +51,7 @@ class ArchivoDEntrada:
         with open("d.txt")as a:
           j=a.read().split('\n')
         tama = len(j)-1
-        
+
         print("<------------------------------>")
         arraya=[]
         for k in j:
